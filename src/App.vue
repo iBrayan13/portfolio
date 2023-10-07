@@ -28,20 +28,26 @@ body
   justify-content: center
   overflow: hidden
 
+@media (min-width: $screen-big)
+  .content-container
+    @include set-size($width: 55rem, $height: calc(40rem - 3rem))
+    margin-top: 1rem
+    border: 2rem solid
+
+  .content
+    @include set-size($width: calc(50rem - 4rem), $height: calc(37rem - 8rem))
+    margin: 2rem
+
 .content-container
-  @include set-size($width: 50rem, $height: calc(40rem - 3rem))
-  margin-top: 1rem
   background-color: $background-third-color
-  border: 2rem solid
   border-bottom-color: $background-second-color
   @include delete-border($top: 'true', $bottom: 'false', $right: 'true', $left: 'true')
   border-radius: $radius-avg
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4)
 
   .content
-    @include set-size($width: calc(50rem - 4rem), $height: calc(37rem - 8rem))
-    margin: 2rem
     display: flex
     flex-direction: column
     align-items: center
+
 </style>
