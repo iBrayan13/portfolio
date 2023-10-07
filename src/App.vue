@@ -39,7 +39,7 @@ body
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4)
 
   .content
-    @include set-size($width: calc(100% - 4rem), $height: calc(100% - 4rem))
+    @include set-size($width: calc(50rem - 4rem), $height: calc(37rem - 8rem))
     margin: 2rem
     display: flex
     flex-direction: column
