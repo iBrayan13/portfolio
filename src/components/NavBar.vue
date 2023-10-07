@@ -2,7 +2,7 @@
     <div class="navbar">
         <ul>
             <router-link to="/">About</router-link>
-            <router-link to="/portfolio">Portfolio</router-link>
+            <router-link to="/projects">Projects</router-link>
             <router-link to="/resume">Resume</router-link>
             <router-link to="/contact">Contact</router-link>
         </ul>
