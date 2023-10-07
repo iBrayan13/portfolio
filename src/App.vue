@@ -20,14 +20,17 @@ export default {
 
 <style lang="sass">
 body
+  @include reset-pm()
   background-color: $background-color
   font-family: 'Rubik', sans-serif
   color: $font-color
   display: flex
   justify-content: center
+  overflow: hidden
 
-#app
-  @include set-size($width: calc(80% - 2rem), $height: calc(40rem - 2rem))
+.content-container
+  @include set-size($width: 50rem, $height: calc(40rem - 3rem))
+  margin-top: 1rem
   background-color: $background-third-color
   border: 2rem solid
   border-bottom-color: $background-second-color
@@ -36,8 +39,9 @@ body
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4)
 
   .content
+    @include set-size($width: calc(100% - 4rem), $height: calc(100% - 4rem))
     margin: 2rem
-    border: 0.1rem solid
-    @include delete-border($top: 'true', $bottom: 'false', $right: 'true', $left: 'true')
-    border-bottom-color: $font-color
+    display: flex
+    flex-direction: column
+    align-items: center
 </style>

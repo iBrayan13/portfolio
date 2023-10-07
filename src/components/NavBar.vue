@@ -1,10 +1,10 @@
 <template>
     <div class="navbar">
         <ul>
-            <li>Home</li>
-            <li>Portfolio</li>
-            <li>Resume</li>
-            <li>Contact</li>
+            <router-link to="/">About</router-link>
+            <router-link to="/portfolio">Portfolio</router-link>
+            <router-link to="/resume">Resume</router-link>
+            <router-link to="/contact">Contact</router-link>
         </ul>
     </div>
 </template>
@@ -38,11 +38,14 @@ export default {
         justify-content: center
         gap: $radius-avg
 
-        li
+        a
             transition: all ease 0.25s
+
+            &:-webkit-any-link
+                color: $font-color
+                text-decoration: none
 
             &:hover
                 cursor: pointer
                 color: $background-second-color
-        
 </style>
