@@ -1,22 +1,12 @@
 <template>
   <div class="home">
-    <ContentComponent />
+    <h1>Brayan Barreto</h1>
+    <p>Full Stack Developer</p>
   </div>
 </template>
 
 <script>
-import ContentComponent from '@/components/ContentComponent.vue'
-
 export default {
-  name: 'HomeView',
-  components: {
-    ContentComponent
-  }
+  name: 'HomeView'
 }
 </script>
-
-<style lang="sass">
-.home
-  display: flex
-  justify-content: center
-</style>
