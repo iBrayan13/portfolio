@@ -68,6 +68,7 @@ export default {
         
         #input-submit
             @include set-size($width: 4rem, $height: 1.5rem)
+            transition: all ease 0.2s
             margin-left: 20rem 
             padding: 0.25rem
             color: $font-third-color

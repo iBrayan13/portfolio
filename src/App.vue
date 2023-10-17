@@ -44,6 +44,9 @@ body
   @include delete-border($top: 'true', $bottom: 'false', $right: 'true', $left: 'true')
   border-radius: $radius-avg
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4)
+  display: flex
+  flex-direction: column
+  align-items: center
 
   .content
     display: flex

@@ -3,7 +3,7 @@
         <ul>
             <router-link to="/">About</router-link>
             <router-link to="/projects">Projects</router-link>
-            <router-link to="/resume">Resume</router-link>
+            <a href="file:///C:/Brayan/Documents/Important/CV%20Brayan%20Barreto%20Backend%20Developer%202023.pdf" target="_blank">Resume</a>
             <router-link to="/contact">Contact</router-link>
         </ul>
     </div>
@@ -16,13 +16,16 @@ export default {
 </script>
   
 <style scoped lang="sass">
-@media (width >= $screen-big)
-    ul
-        @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
-        padding: 0.5rem
-        margin-top: 1.5rem
-        margin-bottom: 0.5rem
-        gap: 1.5rem
+@media (min-width: $screen-big)
+    .navbar
+        @include set-size($width: 55rem, $height: 5rem)
+
+        ul
+            @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
+            padding: 0.5rem
+            margin-top: 1.5rem
+            margin-bottom: 0.5rem
+            gap: 1.5rem
 
 .navbar
     @include reset-pm()
