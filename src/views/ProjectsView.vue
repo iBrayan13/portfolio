@@ -31,7 +31,7 @@ let projects = [
     {
         id: 'project-0',
         name: 'T-GPT',
-        img: "../../public/img/projects/t-gpt.webp",
+        img: 'https://lh3.googleusercontent.com/u/0/drive-viewer/AK7aPaAQDC-7W_1myiuvJZZtmUuAGiMl50gziFkjh7W4IhCn50ziIF9_vQlbtodfyo8iBg_PsySSwRI5pAXpkXzHBj2XvRma4A=w1317-h663',
         description: "T-GPT is a simple search that return chat-gpt's answer. Ask whatever you want and chat-gpt will response to you.",
         objetive: 'Give access to chat-gpt services for countries that is not available.',
         technologies: [{name: 'python', img: techsImgs.python}, {name: 'fastapi', img: techsImgs.fastapi}, {name: 'vuejs', img: techsImgs.vuejs}, {name: 'sass', img: techsImgs.sass}],
