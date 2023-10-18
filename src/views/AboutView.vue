@@ -11,12 +11,19 @@
         </p>
       </div>
     </div>
+
+    <TechsBar />
   </div>
 </template>
 
 <script>
+import TechsBar from '@/components/TechsBar.vue';
+
 export default {
-  name: 'AboutView'
+  name: 'AboutView',
+  components: {
+    TechsBar
+  }
 }
 </script>
 
@@ -25,7 +32,9 @@ export default {
   @include set-size($width: 100%, $height: 100%)
   display: flex
   flex-direction: column
+  justify-content: center
   align-content: center
+  gap: 1rem
 
   .presentation
     @include set-size($width: 46rem, $height: 15rem)

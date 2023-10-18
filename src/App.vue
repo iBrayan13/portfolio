@@ -19,6 +19,17 @@ export default {
 </script>
 
 <style lang="sass">
+@media (min-width: $screen-big)
+  .content-container
+    @include set-size($width: 55rem, $height: calc(40rem - 3rem))
+    margin-top: 2rem
+    margin-bottom: 2rem
+    border: 2rem solid
+
+  .content
+    @include set-size($width: calc(50rem - 4rem), $height: calc(37rem - 8rem))
+    margin: 2rem
+
 body
   @include reset-pm()
   background-color: $background-color
@@ -26,17 +37,6 @@ body
   color: $font-color
   display: flex
   justify-content: center
-  overflow: hidden
-
-@media (min-width: $screen-big)
-  .content-container
-    @include set-size($width: 55rem, $height: calc(40rem - 3rem))
-    margin-top: 1rem
-    border: 2rem solid
-
-  .content
-    @include set-size($width: calc(50rem - 4rem), $height: calc(37rem - 8rem))
-    margin: 2rem
 
 .content-container
   background-color: $background-third-color
