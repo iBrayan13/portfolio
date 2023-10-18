@@ -3,7 +3,7 @@
         <ul>
             <router-link to="/">About</router-link>
             <router-link to="/projects">Projects</router-link>
-            <a href="file:///C:/Brayan/Documents/Important/CV%20Brayan%20Barreto%20Backend%20Developer%202023.pdf" target="_blank">Resume</a>
+            <a href="https://drive.google.com/file/d/12aQn96OeEpH7Xj2ZmpuVOUz5e4KhJSnp/view?usp=share_link" target="_blank">Resume</a>
             <router-link to="/contact">Contact</router-link>
         </ul>
     </div>
