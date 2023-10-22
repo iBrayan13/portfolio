@@ -26,8 +26,19 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@media (min-width: $small-min-screen)
+    #contact
+        @include set-size($width: calc(25rem - 2rem), $height: calc(45rem - 2rem))
+
+@media (min-width: $screen-medium-min)
+    #contact
+        @include set-size($width: calc(40rem - 2rem), $height: calc(35rem - 2rem))
+
+@media (min-width: $screen-big-min)
+    #contact
+        @include set-size($width: calc(42rem - 2rem), $height: calc(30rem - 2rem))
+
 #contact
-    @include set-size($width: calc(40rem - 2rem), $height: calc(30rem - 2rem))
     padding: 1rem
     display: flex
     flex-direction: column

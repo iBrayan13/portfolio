@@ -40,10 +40,6 @@ export default {
     transform: translateX(-100%)
 
 #technologies
-    @include set-size($width: calc(46rem - 4rem), $height: 10rem)
-    border: 2rem solid
-    border-color: $background-second-color
-    @include delete-border($top: 'true', $bottom: 'true')
     border-radius: 1rem
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3)
 
@@ -51,7 +47,6 @@ export default {
         @include set-size($width: calc(10rem - 1.6rem), $height: calc(2rem - 1rem))
         text-align: center
         margin-top: 5px
-        margin-left: 16rem
         padding: 0.8rem
         background-color: $background-second-color
         border: 0
@@ -68,6 +63,45 @@ export default {
             animation: 35s slide infinite linear
 
             .tech
-                @include set-size($width: 5rem, $height: 5rem)
                 margin: 0 1rem
+
+@media (min-width: $small-min-screen)
+    #technologies
+        @include set-size($width: calc(25rem - 4rem), $height: 12rem)
+        margin-top: 2rem
+        margin-bottom: 2rem
+        border: 2rem solid
+        border-color: $background-second-color
+        @include delete-border($right: 'true', $left: 'true')
+
+        h3
+            margin-left: 5.5rem
+
+        .tech
+            @include set-size($width: 5.5rem, $height: 5.5rem)
+
+@media (min-width: $screen-medium-min)
+    #technologies
+        @include set-size($width: calc(36rem - 4rem), $height: 16rem)
+        border: 2rem solid
+        border-color: $background-second-color
+        @include delete-border($top: 'true', $bottom: 'true')
+        margin-top: 0
+        margin-bottom: 3rem
+
+        h3
+            margin-left: 11rem
+
+        .tech
+            @include set-size($width: 8rem, $height: 8rem)
+
+@media (min-width: $screen-big-min)
+    #technologies
+        @include set-size($width: calc(46rem - 4rem), $height: 10rem)
+
+        h3
+            margin-left: 16rem
+
+        .tech
+            @include set-size($width: 5rem, $height: 5rem)
 </style>

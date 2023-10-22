@@ -16,15 +16,28 @@ export default {
 </script>
   
 <style scoped lang="sass">
-@media (min-width: $screen-big)
+@media (min-width: $small-min-screen)
+    .navbar
+        @include set-size($width: 30rem, $height: 5rem)
+
+        ul
+            @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
+            gap: 1.5rem
+
+@media (min-width: $screen-medium-min)
+    .navbar
+        @include set-size($width: 45rem, $height: 5rem)
+
+        ul
+            @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
+            gap: 1.5rem
+
+@media (min-width: $screen-big-min)
     .navbar
         @include set-size($width: 55rem, $height: 5rem)
 
         ul
             @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
-            padding: 0.5rem
-            margin-top: 1.5rem
-            margin-bottom: 0.5rem
             gap: 1.5rem
 
 .navbar
@@ -44,6 +57,9 @@ export default {
         flex-direction: row
         align-items: center
         justify-content: center
+        padding: 0.5rem
+        margin-top: 1.5rem
+        margin-bottom: 0.5rem
 
         a
             transition: all ease 0.25s

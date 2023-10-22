@@ -48,29 +48,23 @@ export default {
 </script>
 
 <style lang="sass">
+
 #projects
     display: flex
     flex-direction: column
     align-items: center
 
     .project
-        @include set-size($width: calc(39rem - 2rem), $height: calc(22rem - 2rem))
         padding: 1rem
         background-color: rgba(0, 0, 0, 0.8)
         border: 0
         border-radius: $radius-avg
         box-shadow: 1rem 1rem 0.4rem rgba(0, 0, 0, 0.4)
-        display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
         gap: 1rem
 
         .project-left
             .project-title
                 color: $font-third-color
-            .project-img
-                @include set-size($width: 20rem, $height: 15rem)
             
         .project-right
             .project-description
@@ -84,7 +78,6 @@ export default {
                 font-size: 1.2rem
 
             .project-techs
-                @include set-size($width: 10rem, $height: 5rem)
                 margin-left: 1rem
                 display: flex
                 justify-content: center
@@ -92,6 +85,49 @@ export default {
                 flex-direction: row
                 gap: 0.5rem
 
-                img
-                    @include set-size($width: 2.5rem, $height: 2.5rem)
+@media (min-width: $small-min-screen)
+    #projects
+
+        .project
+            @include set-size($width: calc(24rem - 2rem), $height: calc(40rem - 2rem))
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+            .project-left
+                .project-img
+                    @include set-size($width: 20rem, $height: 15rem)
+            
+            .project-right
+                .project-techs
+                    @include set-size($width: 12rem, $height: 5rem)
+                    margin-left: 5rem
+                    img
+                        @include set-size($width: 2.5rem, $height: 2.5rem)
+
+@media (min-width: $screen-medium-min)
+    #projects
+        margin-top: 3rem
+
+        .project
+            @include set-size($width: calc(39rem - 2rem), $height: calc(22rem - 2rem))
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+
+            .project-left
+                .project-img
+                    @include set-size($width: 20rem, $height: 15rem)
+            
+            .project-right
+                .project-techs
+                    @include set-size($width: 10rem, $height: 5rem)
+                    img
+                        @include set-size($width: 2.5rem, $height: 2.5rem)
+
+@media (min-width: $screen-big-min)
+    #projects
+        margin-top: 0
 </style>

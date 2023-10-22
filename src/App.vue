@@ -19,16 +19,38 @@ export default {
 </script>
 
 <style lang="sass">
-@media (min-width: $screen-big)
+@media (min-width: $small-min-screen)
+  .content-container
+    @include set-size($width: 30rem, $height: calc(60rem - 3rem))
+    margin-top: 2rem
+    margin-bottom: 2rem
+    border: 2rem solid
+
+    .content
+      @include set-size($width: calc(25rem - 4rem), $height: calc(57rem - 8rem))
+      margin: 2rem
+
+@media (min-width: $screen-medium-min)
+  .content-container
+    @include set-size($width: 45rem, $height: calc(50rem - 3rem))
+    margin-top: 2rem
+    margin-bottom: 2rem
+    border: 2rem solid
+
+    .content
+      @include set-size($width: calc(40rem - 4rem), $height: calc(47rem - 8rem))
+      margin: 2rem
+
+@media (min-width: $screen-big-min)
   .content-container
     @include set-size($width: 55rem, $height: calc(40rem - 3rem))
     margin-top: 2rem
     margin-bottom: 2rem
     border: 2rem solid
 
-  .content
-    @include set-size($width: calc(50rem - 4rem), $height: calc(37rem - 8rem))
-    margin: 2rem
+    .content
+      @include set-size($width: calc(50rem - 4rem), $height: calc(37rem - 8rem))
+      margin: 2rem
 
 body
   @include reset-pm()
