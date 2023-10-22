@@ -16,30 +16,6 @@ export default {
 </script>
   
 <style scoped lang="sass">
-@media (min-width: $small-min-screen)
-    .navbar
-        @include set-size($width: 30rem, $height: 5rem)
-
-        ul
-            @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
-            gap: 1.5rem
-
-@media (min-width: $screen-medium-min)
-    .navbar
-        @include set-size($width: 45rem, $height: 5rem)
-
-        ul
-            @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
-            gap: 1.5rem
-
-@media (min-width: $screen-big-min)
-    .navbar
-        @include set-size($width: 55rem, $height: 5rem)
-
-        ul
-            @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
-            gap: 1.5rem
-
 .navbar
     @include reset-pm()
     background-color: $background-second-color
@@ -71,4 +47,45 @@ export default {
             &:hover
                 cursor: pointer
                 color: $background-second-color
+
+@media (max-width: $small-max-screen-mobile)
+    .navbar
+        @include set-size($width: 15rem, $height: 5rem)
+
+        ul
+            @include set-size($width: calc(14rem - 1rem), $height: calc(3rem - 1rem))
+            gap: 0.5rem
+            font-size: 0.8rem
+
+@media (min-width: $big-min-screen-mobile)
+    .navbar
+        @include set-size($width: 20rem, $height: 5rem)
+
+        ul
+            @include set-size($width: calc(18rem - 1rem), $height: calc(3rem - 1rem))
+            gap: 0.5rem
+
+@media (min-width: $small-min-screen)
+    .navbar
+        @include set-size($width: 30rem, $height: 5rem)
+
+        ul
+            @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
+            gap: 1.5rem
+
+@media (min-width: $screen-medium-min)
+    .navbar
+        @include set-size($width: 45rem, $height: 5rem)
+
+        ul
+            @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
+            gap: 1.5rem
+
+@media (min-width: $screen-big-min)
+    .navbar
+        @include set-size($width: 55rem, $height: 5rem)
+
+        ul
+            @include set-size($width: calc(25rem - 1rem), $height: calc(3rem - 1rem))
+            gap: 1.5rem
 </style>

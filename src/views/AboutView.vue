@@ -59,12 +59,35 @@ export default {
         color: $font-second-color
         margin-bottom: 6rem
 
+@media (max-width: $small-max-screen-mobile)
+  .presentation
+    @include set-size($width: 12rem, $height: 20rem)
+    margin-bottom: 5rem
+
+    img
+      display: none
+    .presentation-text
+      @include set-size($width: 12rem, $height: 18rem)
+
+      p
+        font-size: 1.4rem
+  
+@media (min-width: $big-min-screen-mobile)
+  .presentation
+    @include set-size($width: 15rem, $height: 20rem)
+
+    img
+      display: none
+    .presentation-text
+      @include set-size($width: 15rem, $height: 18rem)
+
+      p
+        font-size: 1.4rem
+
 @media (min-width: $small-min-screen)
   .presentation
     @include set-size($width: 25rem, $height: 20rem)
 
-    img
-      display: none
     .presentation-text
       @include set-size($width: 25rem, $height: 18rem)
 

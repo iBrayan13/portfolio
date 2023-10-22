@@ -85,15 +85,53 @@ export default {
                 flex-direction: row
                 gap: 0.5rem
 
+@media (max-width: $small-max-screen-mobile)
+    #projects
+
+        .project
+            @include set-size($width: calc(13rem - 2rem), $height: calc(40rem - 2rem))
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+            .project-left
+                .project-img
+                    @include set-size($width: 11rem, $height: 8rem)
+            
+            .project-right
+                .project-techs
+                    @include set-size($width: 11rem, $height: 5rem)
+                    margin-left: 0.5rem
+                    img
+                        @include set-size($width: 2.5rem, $height: 2.5rem)
+
+@media (min-width: $big-min-screen-mobile)
+    #projects
+
+        .project
+            @include set-size($width: calc(17rem - 2rem), $height: calc(40rem - 2rem))
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+            .project-left
+                .project-img
+                    @include set-size($width: 16rem, $height: 13rem)
+            
+            .project-right
+                .project-techs
+                    @include set-size($width: 12rem, $height: 5rem)
+                    margin-left: 1.5rem
+                    img
+                        @include set-size($width: 2.5rem, $height: 2.5rem)
+
 @media (min-width: $small-min-screen)
     #projects
 
         .project
             @include set-size($width: calc(24rem - 2rem), $height: calc(40rem - 2rem))
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
 
             .project-left
                 .project-img

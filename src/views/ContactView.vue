@@ -26,18 +26,6 @@ export default {
 </script>
 
 <style scoped lang="sass">
-@media (min-width: $small-min-screen)
-    #contact
-        @include set-size($width: calc(25rem - 2rem), $height: calc(45rem - 2rem))
-
-@media (min-width: $screen-medium-min)
-    #contact
-        @include set-size($width: calc(40rem - 2rem), $height: calc(35rem - 2rem))
-
-@media (min-width: $screen-big-min)
-    #contact
-        @include set-size($width: calc(42rem - 2rem), $height: calc(30rem - 2rem))
-
 #contact
     padding: 1rem
     display: flex
@@ -62,12 +50,43 @@ export default {
         display: flex
         flex-direction: row
         align-items: center
-        gap: 1rem
 
         &:-webkit-any-link
             color: $font-color
             text-decoration: none
 
-        img
-            @include set-size($width: 5rem, $height: 5rem)
+@media (max-width: $small-max-screen-mobile)
+#contact
+        @include set-size($width: calc(15rem - 2rem), $height: calc(45rem - 2rem))
+        .contact-way
+            gap: 0.25rem
+            font-size: 0.6rem
+            img
+                @include set-size($width: 3rem, $height: 3rem)
+
+@media (min-width: $big-min-screen-mobile)
+    #contact
+        @include set-size($width: calc(19rem - 2rem), $height: calc(45rem - 2rem))
+        .contact-way
+            gap: 0.25rem
+            font-size: 0.85rem
+            img
+                @include set-size($width: 3rem, $height: 3rem)
+
+@media (min-width: $small-min-screen)
+    #contact
+        @include set-size($width: calc(25rem - 2rem), $height: calc(45rem - 2rem))
+        .contact-way
+            gap: 1rem
+            font-size: 1rem
+            img
+                @include set-size($width: 5rem, $height: 5rem)
+
+@media (min-width: $screen-medium-min)
+    #contact
+        @include set-size($width: calc(40rem - 2rem), $height: calc(35rem - 2rem))
+
+@media (min-width: $screen-big-min)
+    #contact
+        @include set-size($width: calc(42rem - 2rem), $height: calc(30rem - 2rem))
 </style>

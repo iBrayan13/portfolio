@@ -65,13 +65,38 @@ export default {
             .tech
                 margin: 0 1rem
 
-@media (min-width: $small-min-screen)
+@media (max-width: $small-max-screen-mobile)
     #technologies
-        @include set-size($width: calc(25rem - 4rem), $height: 12rem)
+        @include set-size($width: calc(15rem - 4rem), $height: 10rem)
+        margin-top: 2rem
+        border: 2rem solid
+        border-color: $background-second-color
+        @include delete-border($right: 'true', $left: 'true')
+
+        h3
+            margin-left: 10px
+
+        .tech
+            @include set-size($width: 4rem, $height: 4rem)
+
+@media (min-width: $big-min-screen-mobile)
+    #technologies
+        @include set-size($width: calc(19rem - 4rem), $height: 12rem)
         margin-top: 2rem
         margin-bottom: 2rem
         border: 2rem solid
         border-color: $background-second-color
+        @include delete-border($right: 'true', $left: 'true')
+
+        h3
+            margin-left: 2.5rem
+
+        .tech
+            @include set-size($width: 5rem, $height: 5rem)
+
+@media (min-width: $small-min-screen)
+    #technologies
+        @include set-size($width: calc(25rem - 4rem), $height: 12rem)
         @include delete-border($right: 'true', $left: 'true')
 
         h3
