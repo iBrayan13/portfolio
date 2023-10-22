@@ -1,6 +1,6 @@
 <template>
     <div id="contact" class="view">
-        <p>If you are intrested in <strong>hiring me</strong>, <strong>call</strong> me, <strong>email</strong> me 
+        <p>If you are interested in <strong>hiring me</strong>, <strong>call</strong> me, <strong>email</strong> me 
             or connect and <strong>chat</strong> with me via LinkedIn!</p>
         <a href="https://www.linkedin.com/in/brayan-barreto/" target="_blank" class="contact-way">
             <img src="../../public/img/linkedin_black.svg" alt="linkedin" />
