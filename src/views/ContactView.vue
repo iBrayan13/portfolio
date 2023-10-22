@@ -1,17 +1,19 @@
 <template>
     <div id="contact" class="view">
-        <form method="post">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="input-name" placeholder="Brayan" required>
-            <br>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="input-email" placeholder="brayan@info.com" required>
-            <br>
-            <label for="message">Message</label>
-            <input type="text" name="message" id="input-message" placeholder="Type a message" required>
-            <br>
-            <input type="submit" id="input-submit" value="Send">
-        </form>
+        <p>If you are intrested in <strong>hiring me</strong>, <strong>call</strong> me, <strong>email</strong> me 
+            or connect and <strong>chat</strong> with me via LinkedIn!</p>
+        <a href="https://www.linkedin.com/in/brayan-barreto/" target="_blank" class="contact-way">
+            <img src="../../public/img/linkedin_black.svg" alt="linkedin" />
+            <h3>Brayan Barreto</h3>
+        </a>
+        <a href="mailto:brayanbarreto1130@gmail.com" target="_blank" class="contact-way">
+            <img src="../../public/img/email-black.svg" alt="email" />
+            <h3>brayanbarreto1130@gmail.com</h3>
+        </a>
+        <a href="tel:+584121738328" class="contact-way">
+            <img src="../../public/img/mobile-phone-black.svg" target="_blank" alt="cellphone" />
+            <h3>+58 412 1738328</h3>
+        </a>
     </div>
 </template>
 
@@ -19,63 +21,42 @@
 
 
 export default {
-    name: 'ContactView',
-    mounted(){
-        document.querySelector('form').addEventListener('submit', e => {
-            e.preventDefault();
-            console.log(document.querySelector('#input-name').value)
-            console.log(document.querySelector('#input-email').value)
-            console.log(document.querySelector('#input-message').value)
-        })
-    }
+    name: 'ContactView'
 }
 </script>
 
 <style scoped lang="sass">
 #contact
-    @include set-size($width: calc(30rem - 2rem), $height: calc(25rem - 2rem))
-    background-color: $background-color
+    @include set-size($width: calc(40rem - 2rem), $height: calc(30rem - 2rem))
     padding: 1rem
     display: flex
+    flex-direction: column
     justify-content: center
     align-items: center
+    gap: 1rem
     border: 0
     border-radius: 2rem
 
+    p
+        font: $font-second-color
+        font-size: 1.5rem
+        font-weight: 500
+        text-align: center
 
-    form
-        @include set-size($width: calc(27.5rem - 2rem), $height: calc(22.5rem - 2rem))
-        padding: 1rem
+        strong
+            font-size: 1.52rem
+            font-weight: 700
+
+    .contact-way
         display: flex
-        flex-direction: column
-        justify-content: center
-        gap: 2px
-        font-size: 0.8rem
+        flex-direction: row
+        align-items: center
+        gap: 1rem
 
-        label, input
-            margin-left: 2.4rem
+        &:-webkit-any-link
+            color: $font-color
+            text-decoration: none
 
-        input
-            @include set-size($width: calc(20rem - 1rem), $height: 0.75rem)
-            padding: 0.5rem
-            border: 0
-            border-radius: 0.4rem
-            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25)
-
-        #input-message
-            @include set-size($width: calc(20rem - 1rem), $height: 7.5rem)
-            text-align: left
-        
-        #input-submit
-            @include set-size($width: 4rem, $height: 1.5rem)
-            transition: all ease 0.2s
-            margin-left: 20rem 
-            padding: 0.25rem
-            color: $font-third-color
-            background-color: $background-second-color
-
-            &:hover
-                cursor: pointer
-                color: $background-second-color
-                background-color: $font-third-color
+        img
+            @include set-size($width: 5rem, $height: 5rem)
 </style>
