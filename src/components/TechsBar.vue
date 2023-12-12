@@ -16,6 +16,7 @@
 const techs = [
     {name: 'python', img: 'https://th.bing.com/th/id/R.10327dc6812b05b66a2b6b44c55a097c?rik=nKIXnE7Aetd6Uw&pid=ImgRaw&r=0'},
     {name: 'fastapi', img: 'https://innoboon.com/wp-content/uploads/elementor/thumbs/fastapi-logo-pmqh868lsg9moelfgsgtuijyqj8o9zgvmhce0puq2w.png'},
+    {name: 'flet', img: 'https://flet.dev/img/logo.svg'},
     {name: 'flask', img: 'https://flask-training-courses.uk/images/flask-logo.png'},
     {name: 'vue', img: 'https://s3.amazonaws.com/media-p.slid.es/uploads/320262/images/6946205/logo.png'},
     {name: 'sass', img: 'https://th.bing.com/th/id/R.698519595d5bbc042a250fc356b4d12c?rik=gbCWwaLCVyHz9w&pid=ImgRaw&r=0'},
