@@ -1,30 +1,27 @@
 <template>
     <div id="projects" class="view">
         <h1>Brayan's Projects</h1>
-        <div class="project" v-for="project in projects" :key="project.id" :id="project.id">
-            <div class="project-left">
-                <h1 class="project-title">{{ project.name }}</h1>
-                <img class="project-img" :src="project.img" />
-            </div>
+        <div class="projects-container">
+            <img src="../../public/img/arrow.png" alt="arrow" class="previousBtn projectBtn">
 
-            <div class="project-right">
-                <p class="project-description">{{ project.description }}</p>
-                <p class="project-obj">Goal: {{ project.objetive }}</p>
-                <div class="project-techs">
-                    <img v-for="tech in project.technologies" :key="tech.img" :src="tech.img" :alt="tech.name" />
-                </div>
-                <a :href="project.url" target="_blank" class="project-url">{{ project.url }}</a>
-            </div>
+            <ProjectCard :project="currentProject"/>
+
+            <img src="../../public/img/arrow.png" alt="arrow" class="nextBtn projectBtn">
+
         </div>
     </div>
 </template>
 
 <script>
+import ProjectCard from '@/components/ProjectCard.vue'
+import { ref } from 'vue'
+
 const techsImgs = {
     python: 'https://th.bing.com/th/id/R.10327dc6812b05b66a2b6b44c55a097c?rik=nKIXnE7Aetd6Uw&pid=ImgRaw&r=0',
     fastapi: 'https://innoboon.com/wp-content/uploads/elementor/thumbs/fastapi-logo-pmqh868lsg9moelfgsgtuijyqj8o9zgvmhce0puq2w.png',
     sass: 'https://th.bing.com/th/id/R.698519595d5bbc042a250fc356b4d12c?rik=gbCWwaLCVyHz9w&pid=ImgRaw&r=0',
-    vuejs: 'https://s3.amazonaws.com/media-p.slid.es/uploads/320262/images/6946205/logo.png'
+    vuejs: 'https://s3.amazonaws.com/media-p.slid.es/uploads/320262/images/6946205/logo.png',
+    sql: 'https://www.shareicon.net/data/2015/09/07/97430_document_512x512.png'
 }
 
 let projects = [
@@ -36,136 +33,110 @@ let projects = [
         objetive: 'Give access to chat-gpt services for countries that is not available.',
         technologies: [{name: 'python', img: techsImgs.python}, {name: 'fastapi', img: techsImgs.fastapi}, {name: 'vuejs', img: techsImgs.vuejs}, {name: 'sass', img: techsImgs.sass}],
         url: 'https://t-gpt.onrender.com',
-    }
+    },
+    {
+        id: 'project-1',
+        name: 'MyTokens',
+        img: 'https://lh3.googleusercontent.com/fife/AGXqzDlacVhOylCoTPS4W8DV_wn1Mnp8J99Fexp3S3doNfMtHThCNbS0r9SWkD10mlWbkVYebmp4q3yIb1B7ioKw8DSoHCWsHSbyIuF0MD0mTnypTpe8M0CcdDPfyHvn3Hn98tVNAsN6nyqe6e3-4lUllFmQBiP85nx-nA8MuJyZzmbHwkUvZm2oiToWLxQyeLFTuEkdUatbR9uenk7JGVF8mid74D8yCmo5dYXgPjxEMhjl7Ht2C9CPIitfi4Uk-gsSf4xbh9-p1m8slCrqhvSZBo2qsj5lWAxfor3tXcX2VsKpWr2kxoM-jwWhX03URDfCq-0TNw54oxwu5opZswD9vYS1Imv3fubrw6-vC6Gt0hSUoFxPq8OyN_Ct7FnPihJbUf14dAmqUDZh-nmKre-HHMsi5XtHm_qjX0Y8dLOR3Zidj62aQ7oFjkFbUR4wFJ_lREDNcaAs1ZSMB8MBugBQtQNTY44zt2EStHtT9-e85Q6xusgBWGLd6DCx-mazWfQt6VW1uVJUCsjOpBZS4KSxbMdEbXsyx8PN2QF-M14IJ-gHnEVtR90PLQN3rnY4OZRz9owo1Qo-jb2EKiR9TgQTz_5TMAcm0-u0un14jtNlo3KGPXyPE4Qp2_AFPn5JZJgxOPHKnmM2ThHau4xKf61UwOU86ATt-zvharoX-XMRJ2lDMzwACqSTyLbBLRPnuSrLsLlzI_LEPPEUmBV4k87ZND_NWaWbldxVgCP8NbRwaZCQgq2z42AH27G_BJ6VDyxtNbl6HyNSw-bf_dmyURPkfvR7CovN2MHmT7mUElnyBw2a0mlX7oQiSfvLBEo5BauNifyx2VNO3Fr6MQZ5DHidhudIHJN68xcC9761wCJixqqzC7l55yGiXfwQDLnC2fMlMACahXD10lLP7I0eavZ3bIQihrS5gmWv-iwJD2R2pGSagq3iu3idR64c05WcXN5Knodi6O5AjkhBh31dlTFbQNxRgR97WEzolQQPv4ZMzsUrDs9oT1YPfSwKDfdeQhmNkPZjBwxudgiqP3Gbbq-1S3BlGPkRt-WH_LiKVLjpC6r13BnU7WEacLUUGK8O79zzycdXLOjU7d4oMAU-KgD92MPqzxmyaDhD9rIClSiVwMmmhkIPmuWhdaXRYRUFUB8iLjTb29I6PzcxSpAVEepqrxVkqQGBBjwgO-ewFV6yz5G6_aAjjP7ddHYWt_smbssA_GSdlej9TGxDWwixE62TRO2_5-UgZUBnw_Fow0-6nzF9lVl_xjd6mHg2eGT3YwSsVMPwdJBYAjJkWPrJQiMhx655r6RzcbXeRMz9sUJw-2n6ONb_APcUTXRt_32bP-uoOZkIsYS7lmscvf3m20QyCWAaPZcLBmfh544hqgLTEBDEsxLYJJMvIEDWMA9tCbqqB_xwLE91_Nuwta1wqVF_NHo-Sl5gR-XZ2fszkxXnM2HvrX4ohcR78JFXIbsU2g0XvsUhI41GFxV2RI2rco-FXVLOZLm8-O-iQvFnHoiYdWqwvF5y5uUjttIO40qBl7BwkRfzrRoSdEBIIWpxgTwNC3wSyQ2ie07PLA546fXvz8RzEi3RLpMyRlURq2_hcop6zJ-_oHM0qeU=w1357-h663',
+        description: "MyTokens is a place where gamers can look for match in solo or with friends and get rewards.",
+        objetive: 'Give enjoying to gamers in a secure website.',
+        technologies: [{name: 'python', img: techsImgs.python}, {name: 'fastapi', img: techsImgs.fastapi}, {name: 'sql', img: techsImgs.sql}, {name: 'vuejs', img: techsImgs.vuejs}, {name: 'sass', img: techsImgs.sass}],
+        url: 'In process...',
+    },
 ]
+
+let currentProjectindex = ref(0)
+let currentProject = ref(projects[currentProjectindex.value])
+
+const setPreviousBtn = () => {
+    document.querySelector('.previousBtn').addEventListener('click', e => {
+        e.preventDefault()
+
+        if(currentProjectindex.value > 0){
+            currentProjectindex.value --
+            currentProject.value = projects[currentProjectindex.value]
+        }
+    })
+}
+const setNextBtn = () => {
+    document.querySelector('.nextBtn').addEventListener('click', e => {
+        e.preventDefault()
+
+        if(currentProjectindex.value < projects.length-1){
+            currentProjectindex.value ++
+            currentProject.value = projects[currentProjectindex.value]
+        }
+    })
+}
 
 export default {
     name: 'ProjectsView',
+    components: {
+        ProjectCard
+    },
+    mounted(){
+        setPreviousBtn()
+        setNextBtn()
+    },
     data(){
-        return {projects}
+        return {currentProject}
     }
 }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
+@media (max-width: $small-max-screen-mobile)
+    .projects-container
+        flex-direction: column
+
+        .previousBtn
+            rotate: 270deg
+        .nextBtn
+            rotate: 90deg
+
+@media (min-width: $big-min-screen-mobile)
+    .projects-container
+        flex-direction: column
+
+        .previousBtn
+            rotate: 270deg
+        .nextBtn
+            rotate: 90deg
+        
+
+@media (min-width: $small-min-screen)
+    #projects
+
+
+@media (min-width: $screen-medium-min)
+    #projects
+        margin-top: 3rem
+
+        .projects-container
+            flex-direction: row
+            
+            .previousBtn
+                rotate: 180deg
+            .nextBtn
+                rotate: 0deg
+
+@media (min-width: $screen-big-min)
+    #projects
+        margin-top: 0
 
 #projects
     display: flex
     flex-direction: column
     align-items: center
 
-    .project
-        padding: 1rem
-        background-color: rgba(0, 0, 0, 0.8)
-        border: 0
-        border-radius: $radius-avg
-        box-shadow: 1rem 1rem 0.4rem rgba(0, 0, 0, 0.4)
-        gap: 1rem
+    .projects-container
+        display: flex
+        justify-content: space-between
+        align-items: center
 
-        .project-left
-            .project-title
-                color: $font-third-color
-            
-        .project-right
-            .project-description
-                color: $font-third-color
-                font-size: 1rem
-            .project-obj
-                color: $font-second-color
-                font-size: 0.8rem
-            .project-url
-                color: $font-second-color
-                font-size: 1.2rem
-
-            .project-techs
-                margin-left: 1rem
-                display: flex
-                justify-content: center
-                align-items: center
-                flex-direction: row
-                gap: 0.5rem
-
-@media (max-width: $small-max-screen-mobile)
-    #projects
-
-        .project
-            @include set-size($width: calc(13rem - 2rem), $height: calc(40rem - 2rem))
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
-
-            .project-left
-                .project-img
-                    @include set-size($width: 11rem, $height: 8rem)
-            
-            .project-right
-                .project-techs
-                    @include set-size($width: 11rem, $height: 5rem)
-                    margin-left: 0.5rem
-                    img
-                        @include set-size($width: 2.5rem, $height: 2.5rem)
-
-@media (min-width: $big-min-screen-mobile)
-    #projects
-
-        .project
-            @include set-size($width: calc(17rem - 2rem), $height: calc(40rem - 2rem))
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: center
-
-            .project-left
-                .project-img
-                    @include set-size($width: 16rem, $height: 13rem)
-            
-            .project-right
-                .project-techs
-                    @include set-size($width: 12rem, $height: 5rem)
-                    margin-left: 1.5rem
-                    img
-                        @include set-size($width: 2.5rem, $height: 2.5rem)
-
-@media (min-width: $small-min-screen)
-    #projects
-
-        .project
-            @include set-size($width: calc(24rem - 2rem), $height: calc(40rem - 2rem))
-
-            .project-left
-                .project-img
-                    @include set-size($width: 20rem, $height: 15rem)
-            
-            .project-right
-                .project-techs
-                    @include set-size($width: 12rem, $height: 5rem)
-                    margin-left: 5rem
-                    img
-                        @include set-size($width: 2.5rem, $height: 2.5rem)
-
-@media (min-width: $screen-medium-min)
-    #projects
-        margin-top: 3rem
-
-        .project
-            @include set-size($width: calc(39rem - 2rem), $height: calc(22rem - 2rem))
-            display: flex
-            flex-direction: row
-            justify-content: center
-            align-items: center
-
-            .project-left
-                .project-img
-                    @include set-size($width: 20rem, $height: 15rem)
-            
-            .project-right
-                .project-techs
-                    @include set-size($width: 10rem, $height: 5rem)
-                    img
-                        @include set-size($width: 2.5rem, $height: 2.5rem)
-
-@media (min-width: $screen-big-min)
-    #projects
-        margin-top: 0
+        img
+            @include set-size(40px, 40px)
+        
+        .projectBtn
+            cursor: pointer
 </style>
