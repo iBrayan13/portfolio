@@ -11,7 +11,7 @@
             <div class="project-techs">
                 <img v-for="tech in project.technologies" :key="tech.img" :src="tech.img" :alt="tech.name" />
             </div>
-            <a :href="project.url" target="_blank" class="project-url">{{ project.url }}</a>
+            <a :href="project.url" target="_blank" class="project-url">Visit project</a>
         </div>
     </div>
 </template>
@@ -92,6 +92,7 @@ export default {
                 @include set-size($width: 20rem, $height: 15rem)
         
         .project-right
+            width: calc( 18rem - 2rem )
             .project-techs
                 @include set-size($width: 10rem, $height: 5rem)
                 img
@@ -123,6 +124,8 @@ export default {
         .project-url
             color: $font-second-color
             font-size: 1.2rem
+            display: flex
+            justify-content: center
 
         .project-techs
             display: flex

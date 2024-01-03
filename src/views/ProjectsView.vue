@@ -36,13 +36,22 @@ let projects = [
     },
     {
         id: 'project-1',
+        name: 'Transcribe BOT',
+        img: 'https://th.bing.com/th/id/OIP.aw82cU6MWGShQaqJv7waEAAAAA?rs=1&pid=ImgDetMain',
+        description: "Transcribe BOT is a tool that allow to become your voice messages to text only send them to its telegram chat.",
+        objetive: 'Know what any voice message say with not listen it.',
+        technologies: [{name: 'python', img: techsImgs.python}],
+        url: 'https://github.com/iBrayan13/Transcribe-BOT',
+    },
+    /*{
+        id: 'project-2',
         name: 'MyTokens',
         img: 'https://lh3.googleusercontent.com/fife/AGXqzDlacVhOylCoTPS4W8DV_wn1Mnp8J99Fexp3S3doNfMtHThCNbS0r9SWkD10mlWbkVYebmp4q3yIb1B7ioKw8DSoHCWsHSbyIuF0MD0mTnypTpe8M0CcdDPfyHvn3Hn98tVNAsN6nyqe6e3-4lUllFmQBiP85nx-nA8MuJyZzmbHwkUvZm2oiToWLxQyeLFTuEkdUatbR9uenk7JGVF8mid74D8yCmo5dYXgPjxEMhjl7Ht2C9CPIitfi4Uk-gsSf4xbh9-p1m8slCrqhvSZBo2qsj5lWAxfor3tXcX2VsKpWr2kxoM-jwWhX03URDfCq-0TNw54oxwu5opZswD9vYS1Imv3fubrw6-vC6Gt0hSUoFxPq8OyN_Ct7FnPihJbUf14dAmqUDZh-nmKre-HHMsi5XtHm_qjX0Y8dLOR3Zidj62aQ7oFjkFbUR4wFJ_lREDNcaAs1ZSMB8MBugBQtQNTY44zt2EStHtT9-e85Q6xusgBWGLd6DCx-mazWfQt6VW1uVJUCsjOpBZS4KSxbMdEbXsyx8PN2QF-M14IJ-gHnEVtR90PLQN3rnY4OZRz9owo1Qo-jb2EKiR9TgQTz_5TMAcm0-u0un14jtNlo3KGPXyPE4Qp2_AFPn5JZJgxOPHKnmM2ThHau4xKf61UwOU86ATt-zvharoX-XMRJ2lDMzwACqSTyLbBLRPnuSrLsLlzI_LEPPEUmBV4k87ZND_NWaWbldxVgCP8NbRwaZCQgq2z42AH27G_BJ6VDyxtNbl6HyNSw-bf_dmyURPkfvR7CovN2MHmT7mUElnyBw2a0mlX7oQiSfvLBEo5BauNifyx2VNO3Fr6MQZ5DHidhudIHJN68xcC9761wCJixqqzC7l55yGiXfwQDLnC2fMlMACahXD10lLP7I0eavZ3bIQihrS5gmWv-iwJD2R2pGSagq3iu3idR64c05WcXN5Knodi6O5AjkhBh31dlTFbQNxRgR97WEzolQQPv4ZMzsUrDs9oT1YPfSwKDfdeQhmNkPZjBwxudgiqP3Gbbq-1S3BlGPkRt-WH_LiKVLjpC6r13BnU7WEacLUUGK8O79zzycdXLOjU7d4oMAU-KgD92MPqzxmyaDhD9rIClSiVwMmmhkIPmuWhdaXRYRUFUB8iLjTb29I6PzcxSpAVEepqrxVkqQGBBjwgO-ewFV6yz5G6_aAjjP7ddHYWt_smbssA_GSdlej9TGxDWwixE62TRO2_5-UgZUBnw_Fow0-6nzF9lVl_xjd6mHg2eGT3YwSsVMPwdJBYAjJkWPrJQiMhx655r6RzcbXeRMz9sUJw-2n6ONb_APcUTXRt_32bP-uoOZkIsYS7lmscvf3m20QyCWAaPZcLBmfh544hqgLTEBDEsxLYJJMvIEDWMA9tCbqqB_xwLE91_Nuwta1wqVF_NHo-Sl5gR-XZ2fszkxXnM2HvrX4ohcR78JFXIbsU2g0XvsUhI41GFxV2RI2rco-FXVLOZLm8-O-iQvFnHoiYdWqwvF5y5uUjttIO40qBl7BwkRfzrRoSdEBIIWpxgTwNC3wSyQ2ie07PLA546fXvz8RzEi3RLpMyRlURq2_hcop6zJ-_oHM0qeU=w1357-h663',
         description: "MyTokens is a place where gamers can look for match in solo or with friends and get rewards.",
         objetive: 'Give enjoying to gamers in a secure website.',
         technologies: [{name: 'python', img: techsImgs.python}, {name: 'fastapi', img: techsImgs.fastapi}, {name: 'sql', img: techsImgs.sql}, {name: 'vuejs', img: techsImgs.vuejs}, {name: 'sass', img: techsImgs.sass}],
         url: 'In process...',
-    },
+    },*/
 ]
 
 let currentProjectindex = ref(0)
@@ -54,8 +63,10 @@ const setPreviousBtn = () => {
 
         if(currentProjectindex.value > 0){
             currentProjectindex.value --
-            currentProject.value = projects[currentProjectindex.value]
         }
+        else { currentProjectindex.value = projects.length - 1 }
+
+        currentProject.value = projects[currentProjectindex.value]
     })
 }
 const setNextBtn = () => {
@@ -64,8 +75,10 @@ const setNextBtn = () => {
 
         if(currentProjectindex.value < projects.length-1){
             currentProjectindex.value ++
-            currentProject.value = projects[currentProjectindex.value]
         }
+        else { currentProjectindex.value = 0 }
+
+        currentProject.value = projects[currentProjectindex.value]
     })
 }
 
