@@ -3,6 +3,7 @@
   <div class="content-container">
     <NavBar />
     <div class="content">
+      <a target="_blank" id="cvDownload" href="https://drive.google.com/uc?export=download&id=1rSmqK6BFCVx4r6gW5aldmeB3hqth5WbZ"><img src="https://icon-library.com/images/icon-cv/icon-cv-11.jpg" alt="CV"></a>
       <router-view/>
     </div>
   </div>
@@ -57,6 +58,11 @@ body
     flex-direction: column
     align-items: center
 
+    #cvDownload
+      position: absolute
+      right: 0
+      top: 6rem
+
 @media (max-width: $small-max-screen-mobile)
   .content-container
     @include set-size($width: 15rem, $height: calc(60rem - 3rem))
@@ -64,6 +70,10 @@ body
     .content
       @include set-size($width: calc(14rem - 4rem), $height: calc(57rem - 8rem))
       margin: 1rem
+
+      #cvDownload
+        img
+          @include set-size($width: auto, $height: 3rem)
 
 @media (min-width: $big-min-screen-mobile)
   .content-container
@@ -73,6 +83,12 @@ body
       @include set-size($width: calc(19rem - 4rem), $height: calc(57rem - 8rem))
       margin: 1rem
 
+      #cvDownload
+        top: 9.8rem
+        right: 1rem
+        img
+          @include set-size($width: auto, $height: 3rem)
+
 @media (min-width: $small-min-screen)
   .content-container
     @include set-size($width: 30rem, $height: calc(60rem - 3rem))
@@ -80,6 +96,12 @@ body
     .content
       @include set-size($width: calc(25rem - 4rem), $height: calc(57rem - 8rem))
       margin: 2rem
+
+      #cvDownload
+        top: 9.2rem
+        right: 0
+        img
+          @include set-size($width: auto, $height: 4rem)
 
 @media (min-width: $screen-medium-min)
   .content-container
@@ -89,6 +111,12 @@ body
       @include set-size($width: calc(40rem - 4rem), $height: calc(47rem - 8rem))
       margin: 2rem
 
+      #cvDownload
+        top: 6rem
+        right: 0
+        img
+          @include set-size($width: auto, $height: 5rem)
+
 @media (min-width: $screen-big-min)
   .content-container
     @include set-size($width: 55rem, $height: calc(40rem - 3rem))
@@ -96,4 +124,10 @@ body
     .content
       @include set-size($width: calc(50rem - 4rem), $height: calc(37rem - 8rem))
       margin: 2rem
+
+      #cvDownload
+        top: 6rem
+        right: 0
+        img
+          @include set-size($width: auto, $height: 6rem)
 </style>

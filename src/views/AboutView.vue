@@ -5,10 +5,10 @@
       
       <div class="presentation-text">
         <h1>Brayan Barreto</h1>
-        <h2>Full Stack Developer</h2>
-        <p>
-          Specialist in Python language, focusing in development with functionality, security and simplify.
-        </p>
+        <h2>Python Developer</h2>
+        <p>Experience in web development and database administration.</p>
+        <p>Getting introduce into cloud computing,</p>
+        <p>Interested in Machine Learning.</p>
       </div>
     </div>
 
@@ -56,66 +56,77 @@ export default {
         margin-bottom: 2rem
       
       p
+        @include reset-pm()
         color: $font-second-color
-        margin-bottom: 6rem
 
 @media (max-width: $small-max-screen-mobile)
-  .presentation
-    @include set-size($width: 12rem, $height: 20rem)
-    margin-bottom: 5rem
+  #about
+    justify-content: space-between
+    .presentation
+      @include set-size($width: 12rem, $height: 20rem)
+      margin-bottom: 5rem
+      margin-top: 3rem
 
-    img
-      display: none
-    .presentation-text
-      @include set-size($width: 12rem, $height: 18rem)
+      img
+        display: none
+      .presentation-text
+        @include set-size($width: 12rem, $height: 18rem)
 
-      p
-        font-size: 1.4rem
+        p
+          font-size: 1.4rem
   
 @media (min-width: $big-min-screen-mobile)
-  .presentation
-    @include set-size($width: 15rem, $height: 20rem)
+  #about
+    justify-content: space-between
+    .presentation
+      margin-top: 3rem
+      @include set-size($width: 15rem, $height: 20rem)
 
-    img
-      display: none
-    .presentation-text
-      @include set-size($width: 15rem, $height: 18rem)
+      img
+        display: none
+      .presentation-text
+        @include set-size($width: 15rem, $height: 18rem)
 
-      p
-        font-size: 1.4rem
+        p
+          font-size: 1.4rem
 
 @media (min-width: $small-min-screen)
-  .presentation
-    @include set-size($width: 25rem, $height: 20rem)
+  #about
+    justify-content: center
+    .presentation
+      margin: 0
+      @include set-size($width: 25rem, $height: 20rem)
 
-    .presentation-text
-      @include set-size($width: 25rem, $height: 18rem)
+      .presentation-text
+        @include set-size($width: 25rem, $height: 18rem)
 
-      p
-        font-size: 1.4rem
+        p
+          font-size: 1.4rem
   
 @media (min-width: $screen-medium-min)
-  .presentation
-    @include set-size($width: 36rem, $height: 25rem)
+  #about
+    .presentation
+      @include set-size($width: 36rem, $height: 25rem)
 
-    img
-      display: flex
-      @include set-size($width: 13rem, $height: 18rem)
-    .presentation-text
-      @include set-size($width: 23rem, $height: 18rem)
+      img
+        display: flex
+        @include set-size($width: 13rem, $height: 18rem)
+      .presentation-text
+        @include set-size($width: 23rem, $height: 18rem)
 
-      p
-        font-size: 1.4rem
+        p
+          font-size: 1.4rem
 
 @media (min-width: $screen-big-min)
-  .presentation
-    @include set-size($width: 46rem, $height: 15rem)
+  #about
+    .presentation
+      @include set-size($width: 46rem, $height: 15rem)
 
-    img
-      @include set-size($width: 11rem, $height: 15rem)
-    .presentation-text
-      @include set-size($width: 30rem, $height: 15rem)
+      img
+        @include set-size($width: 11rem, $height: 15rem)
+      .presentation-text
+        @include set-size($width: 30rem, $height: 15rem)
 
-      p
-        font-size: 1rem
+        p
+          font-size: 1rem
 </style>

@@ -3,7 +3,7 @@
         <ul>
             <router-link to="/">About</router-link>
             <router-link to="/projects">Projects</router-link>
-            <a href="https://drive.google.com/uc?export=download&id=1bydG--d_Lahmc5RVI8Q8SYPNVCvz5Kfl" target="_blank">Resume</a>
+            <a href="https://drive.google.com/uc?export=download&id=1rSmqK6BFCVx4r6gW5aldmeB3hqth5WbZ" target="_blank">Resume</a>
             <router-link to="/contact">Contact</router-link>
         </ul>
     </div>

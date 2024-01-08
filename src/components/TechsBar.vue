@@ -16,7 +16,10 @@
 const techs = [
     {name: 'python', img: 'https://th.bing.com/th/id/R.10327dc6812b05b66a2b6b44c55a097c?rik=nKIXnE7Aetd6Uw&pid=ImgRaw&r=0'},
     {name: 'fastapi', img: 'https://innoboon.com/wp-content/uploads/elementor/thumbs/fastapi-logo-pmqh868lsg9moelfgsgtuijyqj8o9zgvmhce0puq2w.png'},
+    {name: 'django', img: 'https://cdn.freebiesupply.com/logos/large/2x/django-logo-png-transparent.png'},
     {name: 'flet', img: 'https://flet.dev/img/logo.svg'},
+    {name: 'numpy', img: 'https://user-images.githubusercontent.com/98330/63813335-20cd4b80-c8e2-11e9-9c04-e4dbf7285aa1.png'},
+    {name: 'pandas', img: 'https://destinytoolbox.net/python/pics/pandas_logo.png'},
     {name: 'flask', img: 'https://flask-training-courses.uk/images/flask-logo.png'},
     {name: 'vue', img: 'https://s3.amazonaws.com/media-p.slid.es/uploads/320262/images/6946205/logo.png'},
     {name: 'sass', img: 'https://th.bing.com/th/id/R.698519595d5bbc042a250fc356b4d12c?rik=gbCWwaLCVyHz9w&pid=ImgRaw&r=0'},
@@ -78,13 +81,12 @@ export default {
             margin-left: 10px
 
         .tech
-            @include set-size($width: 4rem, $height: 4rem)
+            @include set-size($width: auto, $height: 4rem)
 
 @media (min-width: $big-min-screen-mobile)
     #technologies
         @include set-size($width: calc(19rem - 4rem), $height: 12rem)
         margin-top: 2rem
-        margin-bottom: 2rem
         border: 2rem solid
         border-color: $background-second-color
         @include delete-border($right: 'true', $left: 'true')
@@ -93,7 +95,7 @@ export default {
             margin-left: 2.5rem
 
         .tech
-            @include set-size($width: 5rem, $height: 5rem)
+            @include set-size($width: auto, $height: 5rem)
 
 @media (min-width: $small-min-screen)
     #technologies
@@ -104,7 +106,7 @@ export default {
             margin-left: 5.5rem
 
         .tech
-            @include set-size($width: 5.5rem, $height: 5.5rem)
+            @include set-size($width: auto, $height: 5.5rem)
 
 @media (min-width: $screen-medium-min)
     #technologies
@@ -119,7 +121,7 @@ export default {
             margin-left: 11rem
 
         .tech
-            @include set-size($width: 8rem, $height: 8rem)
+            @include set-size($width: auto, $height: 8rem)
 
 @media (min-width: $screen-big-min)
     #technologies
@@ -129,5 +131,5 @@ export default {
             margin-left: 16rem
 
         .tech
-            @include set-size($width: 5rem, $height: 5rem)
+            @include set-size($width: auto, $height: 5rem)
 </style>
