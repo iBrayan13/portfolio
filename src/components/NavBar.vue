@@ -3,7 +3,7 @@
         <ul>
             <router-link to="/">About</router-link>
             <router-link to="/projects">Projects</router-link>
-            <a href="https://drive.google.com/uc?export=download&id=1rSmqK6BFCVx4r6gW5aldmeB3hqth5WbZ" target="_blank">Resume</a>
+            <router-link to="/certificates">Certificates</router-link>
             <router-link to="/contact">Contact</router-link>
         </ul>
     </div>
@@ -54,7 +54,7 @@ export default {
 
         ul
             @include set-size($width: calc(14rem - 1rem), $height: calc(3rem - 1rem))
-            gap: 0.5rem
+            gap: 0.25rem
             font-size: 0.8rem
 
 @media (min-width: $big-min-screen-mobile)
@@ -63,7 +63,7 @@ export default {
 
         ul
             @include set-size($width: calc(18rem - 1rem), $height: calc(3rem - 1rem))
-            gap: 0.5rem
+            gap: 0.45rem
 
 @media (min-width: $small-min-screen)
     .navbar
