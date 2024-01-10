@@ -17,6 +17,10 @@ import { ref } from 'vue'
 
 const certificates = [
     {
+        link: 'https://www.credly.com/earner/earned/badge/86c84d73-9a36-4c83-bf4f-dec18be59580',
+        img: 'https://images.credly.com/size/340x340/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png'
+    },
+    {
         link: 'https://www.udemy.com/certificate/UC-888ae0e7-f456-49d2-892a-d53796547e88/',
         img: 'https://udemy-certificate.s3.amazonaws.com/image/UC-888ae0e7-f456-49d2-892a-d53796547e88.jpg?v=1690577810000'
     },
