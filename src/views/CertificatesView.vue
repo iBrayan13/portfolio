@@ -17,7 +17,11 @@ import { ref } from 'vue'
 
 const certificates = [
     {
-        link: 'https://www.credly.com/earner/earned/badge/86c84d73-9a36-4c83-bf4f-dec18be59580',
+        link: 'https://www.credly.com/badges/91dc48de-9e23-44f6-a5b5-b706fd09190a/public_url',
+        img: 'https://images.credly.com/size/340x340/images/3f802526-7274-4230-91ab-f6d1a35340e6/image.png'
+    },
+    {
+        link: 'https://www.credly.com/badges/86c84d73-9a36-4c83-bf4f-dec18be59580/public_url',
         img: 'https://images.credly.com/size/340x340/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png'
     },
     {
@@ -136,7 +140,6 @@ export default {
 
         .certificate
             cursor: pointer
-            box-shadow: -0.05rem -0.05rem 0.7rem 0.7rem rgba(0, 0, 0, 0.12)
             transition: transform ease 0.3s
 
             &:hover
