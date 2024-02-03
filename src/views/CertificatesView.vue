@@ -17,6 +17,10 @@ import { ref } from 'vue'
 
 const certificates = [
     {
+        link: 'https://www.credly.com/badges/0e5c0c08-295c-480d-b589-d49bcfb0505a/public_url',
+        img: 'https://images.credly.com/size/340x340/images/2784d0d8-327c-406f-971e-9f0e15097003/image.png'
+    },
+    {
         link: 'https://www.credly.com/badges/91dc48de-9e23-44f6-a5b5-b706fd09190a/public_url',
         img: 'https://images.credly.com/size/340x340/images/3f802526-7274-4230-91ab-f6d1a35340e6/image.png'
     },
