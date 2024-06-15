@@ -6,9 +6,9 @@
       <div class="presentation-text">
         <h1>Brayan Barreto</h1>
         <h2>Python Developer</h2>
-        <p>Experience in web development and database administration.</p>
-        <p>Getting introduce into cloud computing,</p>
-        <p>Interested in Machine Learning.</p>
+        <p>Experience in developing agent process automation (APA)</p>
+        <p>Advanced knowledge in Prompt Engineer</p>
+        <p>Specialized in automation with Python</p>
       </div>
     </div>
 

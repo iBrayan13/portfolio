@@ -17,15 +17,13 @@ const techs = [
     {name: 'python', img: 'https://th.bing.com/th/id/R.10327dc6812b05b66a2b6b44c55a097c?rik=nKIXnE7Aetd6Uw&pid=ImgRaw&r=0'},
     {name: 'fastapi', img: 'https://innoboon.com/wp-content/uploads/elementor/thumbs/fastapi-logo-pmqh868lsg9moelfgsgtuijyqj8o9zgvmhce0puq2w.png'},
     {name: 'django', img: 'https://cdn.freebiesupply.com/logos/large/2x/django-logo-png-transparent.png'},
-    {name: 'flet', img: 'https://flet.dev/img/logo.svg'},
     {name: 'numpy', img: 'https://user-images.githubusercontent.com/98330/63813335-20cd4b80-c8e2-11e9-9c04-e4dbf7285aa1.png'},
     {name: 'pandas', img: 'https://destinytoolbox.net/python/pics/pandas_logo.png'},
-    {name: 'flask', img: 'https://flask-training-courses.uk/images/flask-logo.png'},
+    {name: 'flask', img: 'https://themesbrand.com/steex/layouts/assets/images/learning/flask.png'},
     {name: 'vue', img: 'https://s3.amazonaws.com/media-p.slid.es/uploads/320262/images/6946205/logo.png'},
-    {name: 'sass', img: 'https://th.bing.com/th/id/R.698519595d5bbc042a250fc356b4d12c?rik=gbCWwaLCVyHz9w&pid=ImgRaw&r=0'},
     {name: 'git', img: 'https://th.bing.com/th/id/OIP.Xa0BEkwl0Zx4qnY9lMbD7gHaHa?pid=ImgDet&rs=1'},
     {name: 'sql', img: 'https://www.shareicon.net/data/2015/09/07/97430_document_512x512.png'},
-    {name: 'mongodb', img: 'https://th.bing.com/th/id/OIP.q9t19LtUF9JPagepl7ed5QAAAA?pid=ImgDet&w=356&h=356&rs=1'}
+    {name: 'firebase', img: 'https://th.bing.com/th/id/R.c521e7e67222276a6860665a46813cc6?rik=B6RIySVyHjydAg&pid=ImgRaw&r=0'}
 ]
 
 export default {

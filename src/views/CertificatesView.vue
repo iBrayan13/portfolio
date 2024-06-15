@@ -34,7 +34,7 @@ const certificates = [
     },
     {
         link: 'https://www.linkedin.com/learning/certificates/fef8901a90078562c5338f0406ec09d3a934654e8588e0dcf591fb3c43438546?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BlM%2FYMwMJQaejvuuKZHgkjA%3D%3D',
-        img: 'https://media.licdn.com/dms/image/D4E22AQFBXJF8Y2icew/feedshare-shrink_1280/0/1687987058804?e=1707955200&v=beta&t=YfHjTQEPkQQnXn-dxg9BXCehHdFJinq8iTehJhb7FLU'},
+        img: 'https://media.licdn.com/dms/image/D4E22AQFBXJF8Y2icew/feedshare-shrink_1280/0/1687987058804?e=1721260800&v=beta&t=Ly89ae9ut2fhCRS72DhEpsiTiyVk-L7kE65oHjrtB-g'},
     {
         link: 'https://www.sololearn.com/certificates/CC-3MWZG4UB',
         img: 'https://api2.sololearn.com/v2/certificates/CC-3MWZG4UB/image/jpg'
