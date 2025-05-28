@@ -3,7 +3,7 @@
   <div class="content-container">
     <NavBar />
     <div class="content">
-      <a target="_blank" id="cvDownload" href="https://drive.google.com/uc?export=download&id=1Jg9TCnPf0p-EmBtKC2e8unSyRLBICXnh"><img src="https://icon-library.com/images/icon-cv/icon-cv-11.jpg" alt="CV"></a>
+      <a target="_blank" id="cvDownload" href="https://drive.google.com/uc?export=download&id=1_XosP4du7v3G4uSNl5MZW5jH1py3SxqI"><img src="https://icon-library.com/images/icon-cv/icon-cv-11.jpg" alt="CV"></a>
       <router-view/>
     </div>
   </div>
