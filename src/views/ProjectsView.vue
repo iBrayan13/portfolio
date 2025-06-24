@@ -25,7 +25,7 @@ const techsImgs = {
 }
 
 let projects = [
-{
+    {
         id: 'project-1',
         name: 'Transcribe BOT',
         img: 'https://th.bing.com/th/id/OIP.aw82cU6MWGShQaqJv7waEAAAAA?rs=1&pid=ImgDetMain',
@@ -33,6 +33,7 @@ let projects = [
         objetive: 'Know what any voice message say with not listen it.',
         technologies: [{name: 'python', img: techsImgs.python}],
         url: 'https://github.com/iBrayan13/Transcribe-BOT',
+        public: true,
     },
     {
         id: 'project-0',
@@ -42,6 +43,7 @@ let projects = [
         objetive: 'Give access to chat-gpt services for countries that is not available.',
         technologies: [{name: 'python', img: techsImgs.python}, {name: 'fastapi', img: techsImgs.fastapi}, {name: 'vuejs', img: techsImgs.vuejs}, {name: 'sass', img: techsImgs.sass}],
         url: 'https://t-gpt.onrender.com',
+        public: true,
     },
 ]
 

@@ -11,7 +11,13 @@
             <div class="project-techs">
                 <img v-for="tech in project.technologies" :key="tech.img" :src="tech.img" :alt="tech.name" />
             </div>
-            <a :href="project.url" target="_blank" class="project-url">Visit project</a>
+            <a
+                :href="project.public ? project.url : 'javascript:void(0)'"
+                class="project-url"
+                :target="project.public ? '_blank' : null"
+            >
+                {{ project.public ? 'Visit project' : 'Private Project' }}
+            </a>
         </div>
     </div>
 </template>
