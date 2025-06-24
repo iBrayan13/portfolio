@@ -116,6 +116,11 @@ export default {
         .project-title
             color: $font-third-color
         
+        .project-img
+            object-fit: contain // o cover dependiendo de lo que prefieras
+            width: 85%
+            height: auto
+        
     .project-right
         display: flex
         flex-direction: column
