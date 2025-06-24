@@ -1,6 +1,6 @@
 <template>
     <div id="technologies">
-        <h3>Technologies</h3>
+        <h3>Main Technologies</h3>
         <div class="techs-container">
             <div class="techs-slide">
                 <img class="tech" v-for="tech in techs" :key="tech.name" :src="tech.img" :alt="tech.name">
@@ -16,14 +16,12 @@
 const techs = [
     {name: 'python', img: 'https://th.bing.com/th/id/R.10327dc6812b05b66a2b6b44c55a097c?rik=nKIXnE7Aetd6Uw&pid=ImgRaw&r=0'},
     {name: 'fastapi', img: 'https://innoboon.com/wp-content/uploads/elementor/thumbs/fastapi-logo-pmqh868lsg9moelfgsgtuijyqj8o9zgvmhce0puq2w.png'},
-    {name: 'django', img: 'https://cdn.freebiesupply.com/logos/large/2x/django-logo-png-transparent.png'},
-    {name: 'numpy', img: 'https://user-images.githubusercontent.com/98330/63813335-20cd4b80-c8e2-11e9-9c04-e4dbf7285aa1.png'},
-    {name: 'pandas', img: 'https://destinytoolbox.net/python/pics/pandas_logo.png'},
+    {name: 'n8n', img: 'https://wp-webhooks.com/storage/2022/04/icon-n8n.png'},
+    {name: 'docker', img: 'https://th.bing.com/th/id/OIP.IdfqlS0h5WXPBPPcZv50GQHaHa?rs=1&pid=ImgDetMain&cb=idpwebpc2'},
     {name: 'flask', img: 'https://themesbrand.com/steex/layouts/assets/images/learning/flask.png'},
-    {name: 'vue', img: 'https://s3.amazonaws.com/media-p.slid.es/uploads/320262/images/6946205/logo.png'},
-    {name: 'git', img: 'https://th.bing.com/th/id/OIP.Xa0BEkwl0Zx4qnY9lMbD7gHaHa?pid=ImgDet&rs=1'},
     {name: 'sql', img: 'https://www.shareicon.net/data/2015/09/07/97430_document_512x512.png'},
-    {name: 'firebase', img: 'https://th.bing.com/th/id/R.c521e7e67222276a6860665a46813cc6?rik=B6RIySVyHjydAg&pid=ImgRaw&r=0'}
+    {name: 'firebase', img: 'https://th.bing.com/th/id/R.c521e7e67222276a6860665a46813cc6?rik=B6RIySVyHjydAg&pid=ImgRaw&r=0'},
+    {name: 'selenium', img: 'https://toppng.com/uploads/preview/drag-and-drop-action-in-selenium-webdriver-selenium-webdriver-logo-11563140448vrkzsnnton.png'},
 ]
 
 export default {
@@ -46,7 +44,7 @@ export default {
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3)
 
     h3
-        @include set-size($width: calc(10rem - 1.6rem), $height: calc(2rem - 1rem))
+        @include set-size($width: calc(12rem - 1.6rem), $height: calc(2rem - 1rem))
         text-align: center
         margin-top: 5px
         padding: 0.8rem
@@ -69,14 +67,15 @@ export default {
 
 @media (max-width: $small-max-screen-mobile)
     #technologies
-        @include set-size($width: calc(15rem - 4rem), $height: 10rem)
+        @include set-size($width: calc(16rem - 4rem), $height: 10rem)
         margin-top: 2rem
         border: 2rem solid
         border-color: $background-second-color
         @include delete-border($right: 'true', $left: 'true')
 
         h3
-            margin-left: 10px
+            margin-left: 1.5px
+            padding: 0.7rem
 
         .tech
             @include set-size($width: auto, $height: 4rem)
@@ -90,7 +89,7 @@ export default {
         @include delete-border($right: 'true', $left: 'true')
 
         h3
-            margin-left: 2.5rem
+            margin-left: 1.7rem
 
         .tech
             @include set-size($width: auto, $height: 5rem)
@@ -101,7 +100,7 @@ export default {
         @include delete-border($right: 'true', $left: 'true')
 
         h3
-            margin-left: 5.5rem
+            margin-left: 4.7rem
 
         .tech
             @include set-size($width: auto, $height: 5.5rem)
@@ -116,7 +115,7 @@ export default {
         margin-bottom: 3rem
 
         h3
-            margin-left: 11rem
+            margin-left: 10.4rem
 
         .tech
             @include set-size($width: auto, $height: 8rem)
@@ -126,7 +125,7 @@ export default {
         @include set-size($width: calc(46rem - 4rem), $height: 10rem)
 
         h3
-            margin-left: 16rem
+            margin-left: 15rem
 
         .tech
             @include set-size($width: auto, $height: 5rem)

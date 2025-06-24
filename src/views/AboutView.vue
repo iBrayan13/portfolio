@@ -5,10 +5,10 @@
       
       <div class="presentation-text">
         <h1>Brayan Barreto</h1>
-        <h2>Python Developer</h2>
-        <p>Experience in developing agent process automation (APA)</p>
-        <p>Advanced knowledge in Prompt Engineer</p>
-        <p>Specialized in automation with Python</p>
+        <h2>Automation Specialist | Python Developer</h2>
+        <p>Experience in Agent Process Automation (APA).</p>
+        <p>Skilled in LLM frameworks and N8N workflows.</p>
+        <p>Specialized in Python (FastAPI, Langgraph, Selenium).</p>
       </div>
     </div>
 
